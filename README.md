@@ -1,3 +1,12 @@
+# ubuntu-docker
+
+This is a minimal adaptation of Jonathan Dowland's Docker image
+generator.
+
+It has been modified to generate Ubuntu images instead of Debian.
+
+All credit and thanks to Jonathan.
+
 # debian-docker
 scripts and Dockerfiles to build jmtd/debian* docker images
 

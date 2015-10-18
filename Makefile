@@ -1,18 +1,18 @@
 #!/usr/bin/make
-# USAGE: 'sudo make' to build a jessie image (jmtd/debian:jessie).
+# USAGE: 'sudo make' to build a trusty image (camgian/ubuntu:trusty).
 # Define variables on the make command line to change behaviour
 # e.g.
-#       sudo make release=wheezy arch=i386 tag=wheezy-i386
+#       sudo make release=trusty arch=amd64 tag=trusty-amd64
 
 # variables that can be overridden:
-release ?= jessie
-prefix  ?= jmtd
+release ?= trusty
+prefix  ?= camgian
 arch    ?= amd64
-mirror  ?= http://httpredir.debian.org/debian/
+mirror  ?= http://us.archive.ubuntu.com/ubuntu
 tag     ?= $(release)-$(arch)
 
 build: $(tag)/root.tar $(tag)/Dockerfile
-	docker build -t $(prefix)/debian:$(tag) $(tag)
+	docker build -t $(prefix)/ubuntu:$(tag) $(tag)
 
 rev=$(shell git rev-parse --verify HEAD)
 $(tag)/Dockerfile: Dockerfile.in $(tag)
