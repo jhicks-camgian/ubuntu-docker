@@ -1,11 +1,11 @@
 #!/usr/bin/make
-# USAGE: 'sudo make' to build a trusty image (camgian/ubuntu:trusty).
+# USAGE: 'sudo make' to build a 'vivid' image (camgian/ubuntu:vivid).
 # Define variables on the make command line to change behaviour
 # e.g.
-#       sudo make release=trusty arch=amd64 tag=trusty-amd64
+#       sudo make release=vivid arch=amd64 tag=vivid-amd64
 
 # variables that can be overridden:
-release ?= trusty
+release ?= vivid
 prefix  ?= camgian
 arch    ?= amd64
 mirror  ?= http://us.archive.ubuntu.com/ubuntu
